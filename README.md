@@ -48,7 +48,7 @@ Fill in the three values. The whole team uses the **same** values, from the one 
 
 | Variable | Where it comes from in the Supabase dashboard |
 | --- | --- |
-| `DATABASE_URL` | **Connect** button → **Transaction pooler** connection string (port `6543`), with `[YOUR-PASSWORD]` replaced by the database password |
+| `DATABASE_URL` | **Connect** button → **Session pooler** connection string (host ends in `pooler.supabase.com`, port `5432`), with `[YOUR-PASSWORD]` replaced by the database password. Do not use the transaction pooler (port `6543`): `npx drizzle-kit push` hangs on it. |
 | `NEXT_PUBLIC_SUPABASE_URL` | Project Settings → API → Project URL |
 | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Project Settings → API Keys → publishable key |
 
